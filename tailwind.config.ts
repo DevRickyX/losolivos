@@ -10,13 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          "Quicksand",
-          "Rounded Mplus 1c",
-          "ui-rounded",
-          "system-ui",
-          "sans-serif",
-        ],
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

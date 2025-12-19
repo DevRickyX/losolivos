@@ -1,13 +1,21 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Quicksand } from 'next/font/google';
+import { Comfortaa, Raleway } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const quicksand = Quicksand({
+const comfortaa = Comfortaa({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
+  variable: '--font-heading',
+});
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-body',
 });
 
 export const metadata: Metadata = {
@@ -22,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={quicksand.className}>
+      <body className={`${comfortaa.variable} ${raleway.variable} font-body`}>
         <Navbar />
         <main className="min-h-screen pt-20">
           {children}
