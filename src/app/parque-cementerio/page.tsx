@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Leaf, MapPin, Trees, Building2, HeartHandshake, Shield, Camera, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { OrganicImage } from '@/components/OrganicImage';
 
 const spaces = [
   {
@@ -62,8 +63,14 @@ export default function ParqueCementerioPage() {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute inset-0 rounded-3xl bg-white/10 blur-xl" aria-hidden />
-            <div className="relative rounded-3xl bg-white text-funeral-green shadow-2xl p-6 space-y-6">
+            <OrganicImage
+              src="https://images.unsplash.com/photo-1438786657495-640937046d18?auto=format&fit=crop&w=1400&q=80"
+              alt="Jardín con senderos y vegetación para recordar en paz"
+              variant="center"
+              className="max-w-xl ml-auto"
+              caption="Jardines cuidados para visitar y honrar"
+            />
+            <div className="relative mt-4 rounded-3xl bg-white text-funeral-green shadow-2xl p-6 space-y-6 border border-funeral-green/10">
               <div className="flex items-center gap-3">
                 <MapPin className="h-6 w-6 text-funeral-green" />
                 <div>

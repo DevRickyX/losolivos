@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { HeartHandshake, Users, Building2, Sparkles, Award, PhoneCall, Leaf, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { OrganicImage } from '@/components/OrganicImage';
 
 const values = [
   {
@@ -52,13 +53,21 @@ export default function NosotrosPage() {
               </Button>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {milestones.map((item) => (
-              <div key={item.title} className="rounded-2xl bg-white/10 backdrop-blur p-5 border border-white/20">
-                <p className="text-3xl font-semibold text-funeral-yellow">{item.title}</p>
-                <p className="text-funeral-cream/90">{item.text}</p>
-              </div>
-            ))}
+          <div className="space-y-4">
+            <OrganicImage
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
+              alt="Equipo humano de Los Olivos acompañando a una familia"
+              variant="left"
+              caption="Profesionales en previsión, ceremonias y apoyo emocional"
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {milestones.map((item) => (
+                <div key={item.title} className="rounded-2xl bg-white/10 backdrop-blur p-5 border border-white/20">
+                  <p className="text-3xl font-semibold text-funeral-yellow">{item.title}</p>
+                  <p className="text-funeral-cream/90">{item.text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

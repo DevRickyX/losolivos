@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Heart, Music, Flower2, Sparkles, Camera, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { OrganicImage } from '@/components/OrganicImage';
 
 const experiences = [
   {
@@ -64,9 +65,15 @@ export default function HomenajesPage() {
               </Button>
             </div>
           </div>
-          <div className="relative">
-            <div className="absolute inset-0 rounded-3xl bg-white/10 blur-xl" aria-hidden />
-            <div className="relative rounded-3xl bg-white text-funeral-green shadow-2xl p-6 space-y-6">
+          <div className="relative flex flex-col gap-4">
+            <OrganicImage
+              src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1400&q=80"
+              alt="Familia recordando a su ser querido con flores y velas"
+              variant="right"
+              className="max-w-xl ml-auto"
+              caption="Flores, música y símbolos que cuentan historias"
+            />
+            <div className="relative rounded-3xl bg-white text-funeral-green shadow-2xl p-6 space-y-6 border border-funeral-green/10">
               <div className="flex items-center gap-3">
                 <Sparkles className="h-6 w-6 text-funeral-green" />
                 <div>

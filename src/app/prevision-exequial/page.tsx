@@ -9,6 +9,7 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { OrganicImage } from '@/components/OrganicImage';
 
 const planHighlights = [
   {
@@ -107,9 +108,15 @@ export default function PrevisionExequialPage() {
                 ))}
               </div>
             </div>
-            <div className="relative">
-              <div className="absolute inset-0 rounded-3xl bg-white/10 blur-xl" aria-hidden />
-              <div className="relative rounded-3xl bg-white text-funeral-green shadow-2xl p-8 space-y-6">
+            <div className="relative flex flex-col gap-4">
+              <OrganicImage
+                src="https://images.unsplash.com/photo-1511300636408-a63a89df3482?auto=format&fit=crop&w=1400&q=80"
+                alt="Familia sonriendo mientras conversa con un asesor"
+                variant="center"
+                className="max-w-xl ml-auto"
+                caption="Coberturas que protegen y acompañan"
+              />
+              <div className="relative rounded-3xl bg-white text-funeral-green shadow-2xl p-8 space-y-6 border border-funeral-green/10">
                 <div className="flex items-center gap-3">
                   <CalendarClock className="h-10 w-10 text-funeral-green" />
                   <div>
