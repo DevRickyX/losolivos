@@ -55,7 +55,10 @@ export default function HeroSlider() {
         className="hero-swiper"
       >
         {heroSlides.map((slide, index) => (
-          <SwiperSlide key={slide.title} aria-label={`Diapositiva ${index + 1}: ${slide.title}`}>
+          <SwiperSlide
+            key={slide.title}
+            aria-label={`Diapositiva ${index + 1}: ${slide.title}`}
+          >
             <div
               className="relative h-[70vh] w-full min-h-[520px]"
               style={{
@@ -71,16 +74,24 @@ export default function HeroSlider() {
                     <Phone className="h-4 w-4" />
                     <span>Atención inmediata 24/7</span>
                   </div>
-                  <div className="space-y-4 max-w-3xl">
-                    <p className="text-sm uppercase tracking-[0.2em] text-funeral-yellow/90">{slide.subtitle}</p>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">{slide.title}</h1>
-                    <p className="text-lg md:text-xl text-funeral-cream/90 max-w-2xl">{slide.description}</p>
+
+                  <div className="max-w-3xl space-y-4">
+                    <p className="text-sm uppercase tracking-[0.2em] text-funeral-yellow/90">
+                      {slide.subtitle}
+                    </p>
+                    <h1 className="text-4xl font-semibold leading-tight md:text-5xl lg:text-6xl">
+                      {slide.title}
+                    </h1>
+                    <p className="max-w-2xl text-lg text-funeral-cream/90 md:text-xl">
+                      {slide.description}
+                    </p>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-3">
+
+                  <div className="flex flex-col gap-3 sm:flex-row">
                     <Button
                       asChild
                       size="lg"
-                      className="bg-funeral-yellow text-funeral-green hover:bg-funeral-yellow-light text-base md:text-lg"
+                      className="bg-funeral-yellow text-base text-funeral-green hover:bg-funeral-yellow-light md:text-lg"
                     >
                       {slide.primaryHref.startsWith('tel:') ? (
                         <a href={slide.primaryHref}>{slide.primaryLabel}</a>
@@ -88,11 +99,12 @@ export default function HeroSlider() {
                         <Link href={slide.primaryHref}>{slide.primaryLabel}</Link>
                       )}
                     </Button>
+
                     <Button
                       asChild
                       size="lg"
                       variant="outline"
-                      className="border-white text-white hover:bg-white hover:text-funeral-green text-base md:text-lg"
+                      className="border-white text-base text-white hover:bg-white hover:text-funeral-green md:text-lg"
                     >
                       {slide.secondaryHref.startsWith('tel:') ? (
                         <a href={slide.secondaryHref}>{slide.secondaryLabel}</a>
@@ -121,7 +133,6 @@ export default function HeroSlider() {
 
         .hero-swiper .swiper-button-next:after,
         .hero-swiper .swiper-button-prev:after {
-          content: '';
           font-size: 1rem;
           font-weight: 700;
           display: inline-flex;
