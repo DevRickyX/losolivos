@@ -107,9 +107,8 @@ export default function PrevisionExequialPage() {
                 ))}
               </div>
             </div>
-            <div className="relative">
-              <div className="absolute inset-0 rounded-3xl bg-white/10 blur-xl" aria-hidden />
-              <div className="relative rounded-3xl bg-white text-funeral-green shadow-2xl p-8 space-y-6">
+            <div className="relative flex flex-col gap-4">
+              <div className="relative rounded-3xl bg-white text-funeral-green shadow-2xl p-8 space-y-6 border border-funeral-green/10">
                 <div className="flex items-center gap-3">
                   <CalendarClock className="h-10 w-10 text-funeral-green" />
                   <div>

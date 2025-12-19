@@ -2,21 +2,41 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu';
+import { Menu, X, ChevronDown, Phone, Facebook, Instagram } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="bg-funeral-green shadow-lg fixed w-full z-50">
+      <div className="bg-gradient-to-r from-funeral-green-dark via-funeral-green to-funeral-green-dark text-funeral-cream text-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-10 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 text-white">
+              <Phone className="h-4 w-4" />
+              <span className="font-semibold">PBX: 300 012 4983</span>
+            </div>
+            <span className="hidden sm:inline-flex text-white/90">Los Olivos Córdoba y Sucre</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/contacto"
+              className="inline-flex items-center rounded-full bg-funeral-yellow px-3 py-1 text-xs font-semibold text-funeral-green shadow-sm hover:bg-funeral-yellow-light"
+            >
+              Afíliate
+            </Link>
+            <div className="flex items-center gap-2 text-white/90">
+              <Link href="https://www.facebook.com" aria-label="Facebook" className="hover:text-funeral-yellow">
+                <Facebook className="h-4 w-4" />
+              </Link>
+              <Link href="https://www.instagram.com" aria-label="Instagram" className="hover:text-funeral-yellow">
+                <Instagram className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { HeartHandshake, Users, Building2, Sparkles, Award, PhoneCall, Leaf, ShieldCheck } from 'lucide-react';
+import { HeartHandshake, Users, Building2, Sparkles, Award, PhoneCall, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const values = [
@@ -30,7 +30,6 @@ export default function NosotrosPage() {
   return (
     <div className="bg-funeral-cream">
       <section className="relative overflow-hidden bg-gradient-to-br from-funeral-green via-funeral-green-light to-funeral-green-dark text-white">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center" aria-hidden />
         <div className="absolute inset-0 bg-gradient-to-b from-funeral-green/80 to-funeral-green-dark/90" aria-hidden />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="space-y-6">
@@ -52,13 +51,28 @@ export default function NosotrosPage() {
               </Button>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {milestones.map((item) => (
-              <div key={item.title} className="rounded-2xl bg-white/10 backdrop-blur p-5 border border-white/20">
-                <p className="text-3xl font-semibold text-funeral-yellow">{item.title}</p>
-                <p className="text-funeral-cream/90">{item.text}</p>
+          <div className="space-y-4">
+            <div className="rounded-3xl bg-white/10 backdrop-blur p-6 border border-white/15 space-y-4">
+              <p className="text-sm uppercase tracking-[0.25em] text-funeral-yellow">Vocación de servicio</p>
+              <p className="text-lg text-funeral-cream/90">
+                Somos un equipo interdisciplinario que acompaña con respeto, calidez y procesos impecables cada homenaje a la vida.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-funeral-cream/90">
+                {["Respuesta en minutos", 'Cobertura en Córdoba y Sucre', 'Capillas y salas cercanas', 'Acompañamiento al duelo'].map((item) => (
+                  <div key={item} className="rounded-2xl bg-white/10 border border-white/20 px-4 py-3">
+                    {item}
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {milestones.map((item) => (
+                <div key={item.title} className="rounded-2xl bg-white/10 backdrop-blur p-5 border border-white/20">
+                  <p className="text-3xl font-semibold text-funeral-yellow">{item.title}</p>
+                  <p className="text-funeral-cream/90">{item.text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

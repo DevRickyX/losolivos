@@ -104,7 +104,7 @@ export default function HeroSlider() {
                       asChild
                       size="lg"
                       variant="outline"
-                      className="border-white text-base text-white hover:bg-white hover:text-funeral-green md:text-lg"
+                      className="border-white/80 bg-white/10 text-base text-white shadow-sm hover:bg-white hover:text-funeral-green md:text-lg"
                     >
                       {slide.secondaryHref.startsWith('tel:') ? (
                         <a href={slide.secondaryHref}>{slide.secondaryLabel}</a>
@@ -123,18 +123,19 @@ export default function HeroSlider() {
       <style jsx global>{`
         .hero-swiper .swiper-button-next,
         .hero-swiper .swiper-button-prev {
-          width: 3rem;
-          height: 3rem;
+          width: 3.5rem;
+          height: 3.5rem;
           border-radius: 9999px;
-          background: rgba(255, 255, 255, 0.92);
+          background: linear-gradient(135deg, #f4c430, #fff7d6);
           color: #1b4d3e;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+          border: 2px solid rgba(255, 255, 255, 0.8);
         }
 
         .hero-swiper .swiper-button-next:after,
         .hero-swiper .swiper-button-prev:after {
-          font-size: 1rem;
-          font-weight: 700;
+          font-size: 1.35rem;
+          font-weight: 800;
           display: inline-flex;
           align-items: center;
           justify-content: center;
@@ -151,12 +152,15 @@ export default function HeroSlider() {
         .hero-swiper .swiper-pagination-bullet {
           width: 12px;
           height: 12px;
-          background: rgba(255, 255, 255, 0.6);
+          background: rgba(255, 255, 255, 0.75);
           opacity: 1;
+          border: 1px solid rgba(27, 77, 62, 0.3);
+          margin: 0 6px !important;
         }
 
         .hero-swiper .swiper-pagination-bullet-active {
           background: #f4c430;
+          border-color: #f4c430;
         }
       `}</style>
     </div>

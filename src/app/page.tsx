@@ -146,34 +146,29 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="rounded-3xl bg-white text-funeral-green shadow-2xl p-8 space-y-6">
-              <h3 className="text-2xl font-semibold">Acompañamiento paso a paso</h3>
-              <div className="space-y-4 text-funeral-gray">
-                <div className="flex gap-3 items-start">
-                  <span className="mt-1 h-3 w-3 rounded-full bg-funeral-green" />
-                  <div>
-                    <p className="font-semibold text-funeral-green">Respuesta inmediata</p>
-                    <p>Coordinamos traslados y documentación desde el primer contacto.</p>
-                  </div>
+            <div className="relative flex flex-col gap-6">
+              <div className="rounded-3xl bg-white text-funeral-green shadow-2xl p-8 space-y-6 border border-funeral-green/10">
+                <h3 className="text-2xl font-semibold">Acompañamiento paso a paso</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-funeral-gray">
+                  {[{ title: 'Respuesta inmediata', text: 'Coordinamos traslados y documentación desde el primer contacto.' },
+                  { title: 'Logística impecable', text: 'Capillas, salas de velación y ceremonias religiosas o laicas.' },
+                  { title: 'Soporte posterior', text: 'Asesoría en trámites legales y espacios de apoyo emocional.' },
+                  { title: 'Atención humana', text: 'Equipo especializado disponible en todo momento.' }].map((step, index) => (
+                    <div key={step.title} className="flex gap-3 items-start rounded-2xl bg-funeral-cream/60 border border-funeral-green/10 p-4">
+                      <span
+                        className={`mt-1 h-3 w-3 rounded-full ${index % 2 === 0 ? 'bg-funeral-green' : 'bg-funeral-yellow'}`}
+                      />
+                      <div>
+                        <p className="font-semibold text-funeral-green">{step.title}</p>
+                        <p>{step.text}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex gap-3 items-start">
-                  <span className="mt-1 h-3 w-3 rounded-full bg-funeral-yellow" />
-                  <div>
-                    <p className="font-semibold text-funeral-green">Logística impecable</p>
-                    <p>Capillas, salas de velación y acompañamiento para ceremonias religiosas o laicas.</p>
-                  </div>
-                </div>
-                <div className="flex gap-3 items-start">
-                  <span className="mt-1 h-3 w-3 rounded-full bg-funeral-green" />
-                  <div>
-                    <p className="font-semibold text-funeral-green">Soporte posterior</p>
-                    <p>Asesoría en trámites legales y espacios de apoyo emocional.</p>
-                  </div>
-                </div>
+                <Button asChild size="lg" className="bg-funeral-green text-white hover:bg-funeral-green-light">
+                  <Link href="/nosotros">Conoce nuestro equipo</Link>
+                </Button>
               </div>
-              <Button asChild size="lg" className="bg-funeral-green text-white hover:bg-funeral-green-light">
-                <Link href="/nosotros">Conoce nuestro equipo</Link>
-              </Button>
             </div>
           </div>
         </div>

@@ -39,8 +39,7 @@ export default function ParqueCementerioPage() {
   return (
     <div className="bg-funeral-cream">
       <section className="relative overflow-hidden bg-gradient-to-br from-funeral-green via-funeral-green-light to-funeral-green-dark text-white">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-15" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-b from-funeral-green/80 to-funeral-green-dark/90" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-b from-funeral-green/85 to-funeral-green-dark/90" aria-hidden />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold">
@@ -62,8 +61,7 @@ export default function ParqueCementerioPage() {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute inset-0 rounded-3xl bg-white/10 blur-xl" aria-hidden />
-            <div className="relative rounded-3xl bg-white text-funeral-green shadow-2xl p-6 space-y-6">
+            <div className="relative rounded-3xl bg-white text-funeral-green shadow-2xl p-6 space-y-6 border border-funeral-green/10">
               <div className="flex items-center gap-3">
                 <MapPin className="h-6 w-6 text-funeral-green" />
                 <div>

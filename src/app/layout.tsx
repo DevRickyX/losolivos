@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${comfortaa.variable} ${raleway.variable} font-body`}>
         <Navbar />
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen pt-28">
           {children}
         </main>
         <Footer />
